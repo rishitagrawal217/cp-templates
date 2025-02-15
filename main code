@@ -1,36 +1,41 @@
-//#include <bits/stdc++.h>
-#include <algorithm> 
-#include <numeric>    
-#include <cmath>     
-#include <cstdlib>     
-#include <ctime>   
-#include <iostream>
-#include <vector>   
-#include <deque>             
-#include <set>        
-#include <map>      
-#include <unordered_map>
-#include <stack>     
-#include <queue>   
-#include <bitset> 
-#include <utility>     
-#include <tuple>           
+#include <bits/stdc++.h>
 using namespace std;
 #define Rishit ios_base::sync_with_stdio(false)
 #define Agrawal cin.tie(NULL); cout.tie(NULL)
 #define int long long
-#define f first
-#define s second
-#define pb push_back
-void solve() {
+#define mod 1000000007
+#define vi vector<int> 
+int binExpo(int base, int exp, int m = mod) {
+    int result = 1;
+    base %= m;
+    while (exp > 0) {
+        if (exp & 1) {
+            result = (result * base) % m;
+        }
+        base = (base * base) % m;
+        exp >>= 1;
+    }
+    return result;
+}
+int nCr(int n, int r) {
+    if (r > n || r < 0) return 0;
+    int factN = 1, factR = 1, factNR = 1;
+    for (int i = 1; i <= n; i++) {
+        factN = (factN * i) % mod;
+        if (i == r) factR = factN;
+        if (i == n - r) factNR = factN;
+    }
+    return (factN * binExpo(factR, mod - 2) % mod * binExpo(factNR, mod - 2) % mod) % mod;
+}
+
+void solve(){
+  
+  
 }
 signed main() {
     Rishit;
     Agrawal;
-    int t;
-    cin >> t;
-    for (int i = 0; i < t; ++i) {
-        solve();
-    }
+    int t; cin >> t;
+    while(t--)solve();
     return 0;
 }
