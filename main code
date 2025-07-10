@@ -109,13 +109,15 @@ int mex(const vi &a) {
     return m;
 }
 void solve(){
-    
+
 }
 signed main() {
     RishitAgrawal;
     int t; cin >> t;
     //int t=1;
     //preCompute();
+    //sieve(MAXN);
+    //sieveSPF(MAXN);
     while(t--) solve();
     return 0;
 }
