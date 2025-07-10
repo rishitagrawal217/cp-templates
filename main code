@@ -18,6 +18,7 @@ using i128  = __int128_t;
 #define maxel *max_element(a.begin(), a.end());
 #define minel *min_element(a.begin(), a.end());
 #define printans cout<<ans<<endl;
+#define printmatrix(a,n,m) for(int i = 0; i < n; i++){for(int j = 0; j < m; j++){cout << a[i][j] << " ";} cout << "\n";}
 const int mod = 1e9+7;   
 const int MAXN = 1000005;   
 int gcd(int a, int b) {
@@ -90,7 +91,6 @@ public:
     void update(int pos,int val){update(1,0,n-1,pos,val);}
     int query(int l,int r){return query(1,0,n-1,l,r);}
 };
- 
 class FenwickTree {
     int n; vector<int> bit;
 public:
@@ -99,9 +99,17 @@ public:
     int query(int i){int r=0;for(++i;i;i-=i&-i)r+=bit[i];return r;}
     int rangeQuery(int l,int r){return query(r)-query(l-1);}
 };
-void solve() {
-   
-
+int mex(const vi &a) {
+    unordered_set<int> s;
+    for (int j = 0; j < a.size(); ++j) {
+        s.insert(a[j]);
+    }
+    int m = 0;
+    while (s.count(m)) m++;
+    return m;
+}
+void solve(){
+    
 }
 signed main() {
     RishitAgrawal;
