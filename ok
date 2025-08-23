@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long
+#define RishitAgrawal ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define vvi vector<vector<int>>
+#define vpii vector<pair<int,int>>
+#define pb push_back
+#define pyes cout<<"YES"<<endl;
+#define pno cout<<"NO"<<endl;
+const int mod = 1e9+7;   
+void solve(){
+}
+signed main() {
+    RishitAgrawal;
+    int t; cin >> t;
+    while(t--) solve();
+    return 0;
+}
