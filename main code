@@ -13,6 +13,10 @@ using namespace std;
 #define pyes cout<<"YES"<<endl;
 #define pno cout<<"NO"<<endl;
 const int mod = 1e9+7;   
+#define setbits(a)      (__builtin_popcountll(a))  // to count 1 bits
+#define rightz(a)        (__builtin_ctzll(a))       // to count trailing 0s
+#define leftz(a)         (__builtin_clzll(a))       // to count leading 0s
+#define parity(a)       (__builtin_parityll(a))    // to check even odd
 int modpow(int a, int b) {
     int res = 1;
     while (b > 0) {
