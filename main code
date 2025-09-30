@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
 using namespace std;
+using namespace __gnu_pbds;
 #define int long long
 #define vi vector<int>
 #define rep(i,a,b) for(int i=a;i<b;i++) 
@@ -13,10 +16,10 @@ using namespace std;
 #define pyes cout<<"YES"<<endl;
 #define pno cout<<"NO"<<endl;
 const int mod = 1e9+7;   
-#define setbits(a)      (__builtin_popcountll(a))  // to count 1 bits
-#define rightz(a)        (__builtin_ctzll(a))       // to count trailing 0s
-#define leftz(a)         (__builtin_clzll(a))       // to count leading 0s
-#define parity(a)       (__builtin_parityll(a))    // to check even odd
+#define setbits(a)      (__builtin_popcountll(a))  
+#define rightz(a)        (__builtin_ctzll(a))      
+#define leftz(a)         (__builtin_clzll(a))       
+#define parity(a)       (__builtin_parityll(a))   
 int modpow(int a, int b) {
     int res = 1;
     while (b > 0) {
@@ -39,8 +42,11 @@ int nCr(int n, int r) {
     }
     return res;
 }
+
+template<class T> using oset = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 void solve(){
 }
+
 signed main() {
     RishitAgrawal;
     int t; cin >> t;
